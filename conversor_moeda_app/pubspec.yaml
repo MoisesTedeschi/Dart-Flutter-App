@@ -66,3 +66,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+  dependencies:
+    flutter:
+      sdk: flutter
+    http: ^0.12.0
