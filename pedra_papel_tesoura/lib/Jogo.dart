@@ -15,18 +15,23 @@ class _JogoState extends State<Jogo> {
       ),
       body: Column(
         //Alinhamento de Elementos do App
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
 
         children: <Widget>[
-          Text("Escolha do App"),
-          Image.asset(
-            //Caminho da imagem
-            //Tamanho da imagem
-
+          Padding(
+            padding: EdgeInsets.only(top: 30.0, bottom: 16.0),
+            child: Text(
+              "Ecolha do Oponente",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
-          //Texto de Resoltado
-          //Linha com opções
+
+          Image.asset("images/padrao.png"),
 
         ],
       ),
