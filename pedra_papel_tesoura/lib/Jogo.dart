@@ -14,7 +14,19 @@ class _JogoState extends State<Jogo> {
         backgroundColor: Colors.blue,
       ),
       body: Column(
+        //Alinhamento de Elementos do App
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+
         children: <Widget>[
+          Text("Escolha do App"),
+          Image.asset(
+            //Caminho da imagem
+            //Tamanho da imagem
+
+          ),
+          //Texto de Resoltado
+          //Linha com opções
 
         ],
       ),
