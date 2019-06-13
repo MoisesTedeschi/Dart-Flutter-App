@@ -8,6 +8,16 @@ class Jogo extends StatefulWidget {
 class _JogoState extends State<Jogo> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("JoKenPo - Pedra, Papel e Tesoura"),
+        backgroundColor: Colors.blue,
+      ),
+      body: Column(
+        children: <Widget>[
+
+        ],
+      ),
+    );
   }
 }
