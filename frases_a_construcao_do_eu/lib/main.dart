@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main(){
   runApp(MaterialApp(
@@ -13,6 +14,20 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // Definição de Variáveis do APP
+  var _frases = [
+    "Frase 1",
+    "Frase 2",
+    "Frase 3",
+    "Frase 4"
+  ];
+  var _fraseGerada = "Clique para gerar uma nova frase!";
+
+  void _gerarFrase(){
+    // Gerando Números randomicos para randomizar as frases.
+    var numeroRanomico = Random().nextInt(4);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,12 +61,12 @@ class _HomeState extends State<Home> {
             ),
             RaisedButton(
               child: Text(
-                  "Nova Frase",
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+                _fraseGerada,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               color: Colors.pink,
               onPressed: (){},
