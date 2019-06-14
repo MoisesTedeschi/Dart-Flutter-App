@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class Jogo extends StatefulWidget {
   @override
@@ -9,9 +10,10 @@ class _JogoState extends State<Jogo> {
 
   var _imagemAPP = AssetImage("images/padrao.png");
 
-  void opcaoSelecionada(String escolhaUsuario){
+  void _opcaoSelecionada(String escolhaUsuario){
 
-
+    var opcoes = ["Pedra", "Papel", "Tesoura"];
+    var numero = Random().nextInt(3);
 
   }
 
@@ -60,15 +62,15 @@ class _JogoState extends State<Jogo> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               GestureDetector(
-                onTap: () => opcaoSelecionada("Pedra"),
+                onTap: () => _opcaoSelecionada("Pedra"),
                 child: Image.asset("images/pedra.png", height: 100,),
               ),
               GestureDetector(
-                onTap: () => opcaoSelecionada("Papel"),
+                onTap: () => _opcaoSelecionada("Papel"),
                 child: Image.asset("images/papel.png", height: 100,),
               ),
               GestureDetector(
-                onTap: () => opcaoSelecionada("Tesoura"),
+                onTap: () => _opcaoSelecionada("Tesoura"),
                 child: Image.asset("images/tesoura.png", height: 100,),
               ),
               /*
