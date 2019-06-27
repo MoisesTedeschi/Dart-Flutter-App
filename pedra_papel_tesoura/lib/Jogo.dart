@@ -16,15 +16,15 @@ class _JogoState extends State<Jogo> {
     var opcoes = ["Pedra", "Papel", "Tesoura"];
     var numero = Random().nextInt(3);
 
-    var escolaAPP = opcoes[numero];
+    var escolhaAPP = opcoes[numero];
 
     //Teste de escolha
     /*
-    print("Escolha do APP: $escolaAPP");
+    print("Escolha do APP: $escolhaAPP");
     print("Escolha do Usuário: $escolhaUsuario");
     */
 
-    switch( escolaAPP ){
+    switch( escolhaAPP ){
       case "Pedra" :
         setState(() {
           this._imagemAPP = AssetImage("images/pedra-new.png");
@@ -43,8 +43,30 @@ class _JogoState extends State<Jogo> {
         });
         break;
     }
-
-
+    //Validação do Vencedor
+    if(
+    //Caso o Usuário vença
+        (escolhaUsuario == "Pedra" && escolhaAPP == "Tesoura") ||
+        (escolhaUsuario == "Tesoura" && escolhaAPP == "Papel") ||
+        (escolhaUsuario == "Papel" && escolhaAPP == "Pedra")
+    ){
+      setState(() {
+        this._mensagem = "Parabéns, você venceu!";
+      });
+    }else if(
+    //Caso o APP vença
+        (escolhaAPP == "Pedra" && escolhaUsuario == "Tesoura") ||
+        (escolhaAPP == "Tesoura" && escolhaUsuario == "Papel") ||
+        (escolhaAPP == "Papel" && escolhaUsuario == "Pedra")
+    ){
+      setState(() {
+        this._mensagem = "Você perdeu!";
+      });
+    }else{
+      setState(() {
+        this._mensagem = "Um empate. Jogue novamente!";
+      });
+    }
   }
 
   @override
