@@ -49,6 +49,10 @@ flutter:
     - images/papel.png
     - images/pedra.png
     - images/tesoura.png
+    - images/padrao-new.png
+    - images/pedra-new.png
+    - images/tesoura-new.png
+    - images/papel-new.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
